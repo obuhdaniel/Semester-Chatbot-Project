@@ -8,6 +8,17 @@
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/obuhdaniel/Semester-Chatbot-Project.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/obuhdaniel/Semester-Chatbot-Project/issues"
+  },
+
+  "homepage": "https://github.com/obuhdaniel/Semester-Chatbot-Project",
+
   "files": [
     "dist"
   ],
