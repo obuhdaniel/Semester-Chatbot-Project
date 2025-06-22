@@ -18,7 +18,7 @@ A lightweight and beautiful React component library for interacting with locally
 
 ## 📦 Installation
 
-Make sure you have `react`, `react-dom`, `tailwindcss`, and `lucide-react` installed in your project.
+Make sure you have `react`, `react-dom`, `axios`, `tailwindcss`, and `lucide-react` installed in your project.
 
 ```bash
 npm install ollama-web-ui
@@ -33,7 +33,7 @@ yarn add ollama-web-ui
 > 💡 This package relies on peer dependencies. Install them if you haven't:
 
 ```bash
-npm install react react-dom tailwindcss lucide-react
+npm install react react-dom axios tailwindcss @tailwindcss/vite lucide-react
 ```
 
 ---
@@ -42,12 +42,12 @@ npm install react react-dom tailwindcss lucide-react
 
 ```jsx
 import React from 'react';
-import OllamaChat from 'ollama-web-ui';
+import OllamaUi from 'ollama-web-ui';
 
 function App() {
   return (
     <div className="p-4">
-      <OllamaChat />
+      <OllamaUi />
     </div>
   );
 }
@@ -60,32 +60,27 @@ function App() {
 Ensure Tailwind is configured in your project. Minimal setup:
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
+npm install tailwindcss @tailwindcss/vite
 npx tailwindcss init -p
 ```
 
-Add this to your `tailwind.config.js`:
+Add this to your `vite.config.js`:
 
 ```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", 
-    "./node_modules/ollama-web-ui/dist/**/*.{js,jsx}"
+
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
   ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+})
 ```
 
 Then include the Tailwind styles in your main `index.css` or `App.css`:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
 ---
