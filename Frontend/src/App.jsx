@@ -223,7 +223,7 @@ const App = () => {
           <div className="flex items-center justify-between p-4 border-b border-gray-700">
             <div className="flex items-center space-x-2">
               <Bot className="h-6 w-6 text-indigo-500" />
-              <h1 className="text-lg font-semibold">Ollama Chat</h1>
+              <h1 className="text-lg font-semibold">Ollama Web Ui</h1>
             </div>
             <button
               onClick={() => setSidebarOpen(false)}
@@ -371,7 +371,7 @@ const App = () => {
             <div className="flex items-center justify-center h-full">
               <div className="text-center max-w-md mx-auto">
                 <Bot className="h-16 w-16 mx-auto mb-4 text-indigo-500" />
-                <h2 className="text-2xl font-semibold mb-2">Welcome to Ollama Chat</h2>
+                <h2 className="text-2xl font-semibold mb-2">Welcome to Ollama Web</h2>
                 <p className="text-gray-500 mb-6">
                   Start a conversation with your local AI model. Choose a model from the dropdown and begin chatting.
                 </p>
