@@ -376,7 +376,7 @@ const App = () => {
                   Start a conversation with your local AI model. Choose a model from the dropdown and begin chatting.
                 </p>
                 <div className="flex flex-wrap gap-2 justify-center">
-                  {['Tell me a joke', 'Tell me how you are doing', 'How is your day going?'].map((prompt) => (
+                  {['Tell me a joke', 'What is an Oscilloscope', 'what is Software Engineering?'].map((prompt) => (
                     <button
                       key={prompt}
                       onClick={() => setInput(prompt)}
