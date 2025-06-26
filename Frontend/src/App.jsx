@@ -222,8 +222,8 @@ const App = () => {
           {/* Sidebar header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-700">
             <div className="flex items-center space-x-2">
-              <Bot className="h-6 w-6 text-indigo-500" />
-              <h1 className="text-lg font-semibold">Ollama Web Ui</h1>
+              <Bot className="h-6 w-6 text-blue-500" />
+              <h1 className="text-lg font-medium">Group 4 Chatbot</h1>
             </div>
             <button
               onClick={() => setSidebarOpen(false)}
@@ -237,7 +237,7 @@ const App = () => {
           <div className="p-4">
             <button
               onClick={createNewChat}
-              className="w-full flex items-center justify-center space-x-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-colors"
+              className="w-full flex items-center justify-center space-x-2 bg-indigo-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
             >
               <Plus className="h-4 w-4" />
               <span>New Chat</span>
@@ -344,15 +344,15 @@ const App = () => {
           <div className="flex items-center space-x-2">
             <button
               onClick={exportChat}
-              className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
-              title="Export chat"
+              className="p-2 hover:bg-blue-700 rounded-lg transition-colors"
+              title="Download chat"
             >
               <Download className="h-4 w-4" />
             </button>
             <button
               onClick={clearCurrentChat}
               className="p-2 hover:bg-red-600 rounded-lg transition-colors"
-              title="Clear chat"
+              title="Delete chat"
             >
               <Trash2 className="h-4 w-4" />
             </button>
@@ -371,12 +371,12 @@ const App = () => {
             <div className="flex items-center justify-center h-full">
               <div className="text-center max-w-md mx-auto">
                 <Bot className="h-16 w-16 mx-auto mb-4 text-indigo-500" />
-                <h2 className="text-2xl font-semibold mb-2">Welcome to Ollama Web</h2>
+                <h2 className="text-2xl font-semibold mb-2">Welcome to Group 4 Chatbot</h2>
                 <p className="text-gray-500 mb-6">
                   Start a conversation with your local AI model. Choose a model from the dropdown and begin chatting.
                 </p>
                 <div className="flex flex-wrap gap-2 justify-center">
-                  {['Tell me a joke', 'Explain quantum computing', 'Write a poem about code'].map((prompt) => (
+                  {['Tell me a joke', 'Tell me how you are doing', 'How is your day going?'].map((prompt) => (
                     <button
                       key={prompt}
                       onClick={() => setInput(prompt)}
